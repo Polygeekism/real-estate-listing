@@ -4,8 +4,13 @@ app.service('PropertyService', ['$http', function ($http) {
     var self = this;
 
     this.getSale = function () {
-        $http.get('/properties').then(function (response) {
-            console.log(response);
+        $http.get('/properties/sale').then(function (response) {
+            console.log(response.data);
+        });
+    }
+    this.getRental = function () {
+        $http.get('/properties/rental').then(function (response) {
+            console.log(response.data);
         });
     }
     
