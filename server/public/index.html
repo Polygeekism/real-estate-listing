@@ -6,18 +6,18 @@
     <script src='/vendors/angular.min.js'></script>
     <script src='/vendors/angular-route.js'></script>
     <script src='/scripts/client.js'></script>
-    <script src='/scripts/controllers/saleProperty.controller.js'></script>
-    <script src='/scripts/controllers/rentalProperty.controller.js'></script>
+    <script src='/scripts/controllers/listings.controller.js'></script>
+    <script src='/scripts/controllers/rentals.controller.js'></script>
     <script src='/scripts/services/property.service.js'></script>
 
 </head>
 
-<body>
+<body ng-app ="app">
     <h1>Do the Things!!!</h1>
-    <div id="saleContainer" ng-app ="app" ng-controller="SaleProperty as vm">
+    <div id="saleContainer" ng-controller="Listings as vm">
         <h2> Sale Properties</h2>
     </div>
-    <div id="rentalContainer" ng-app = 'app' ng-controller = 'RentalProperty as vm'>
+    <div id="rentalContainer" ng-controller = 'Rentals as vm'>
         <h2> Rental Properties</h2>
     </div>
 

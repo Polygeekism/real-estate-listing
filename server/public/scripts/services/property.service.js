@@ -3,13 +3,13 @@ app.service('PropertyService', ['$http', function ($http) {
 
     var self = this;
 
-    this.getSale = function () {
-        $http.get('/properties/sale').then(function (response) {
+    this.getListings = function () {
+        $http.get('/properties/listings').then(function (response) {
             console.log(response.data);
         });
     }
-    this.getRental = function () {
-        $http.get('/properties/rental').then(function (response) {
+    this.getRentals = function () {
+        $http.get('/properties/rentals').then(function (response) {
             console.log(response.data);
         });
     }

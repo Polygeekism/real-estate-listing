@@ -14,7 +14,7 @@ app.use(bodyParser.json());
 app.use('/properties', properties);
 
 //database connections
-var databaseUrl = 'mongodb://localhost:27017/betelgeuse';
+var databaseUrl = 'mongodb://localhost:27017/realestate';
 mongoose.connect(databaseUrl, 
 {
     useMongoClient: true
