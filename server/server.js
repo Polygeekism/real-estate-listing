@@ -7,7 +7,7 @@ var properties = require('./routes/properties');
 var mongoose = require('mongoose');
 
 //middleware
-app.use(express.static('./server/public'));
+app.use(express.static('./server/public/'));
 app.use(bodyParser.json());
 
 //routes

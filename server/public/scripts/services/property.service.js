@@ -2,15 +2,21 @@ app.service('PropertyService', ['$http', function ($http) {
     console.log('Property service loaded.');
 
     var self = this;
+    self.listings = { list: [] };
+    self.rentals = {list:[]};
 
-    this.getListings = function () {
+    self.getListings = function () {
         $http.get('/properties/listings').then(function (response) {
-            console.log(response.data);
+            
+            self.listings.list = response.data;
+            console.log(self.listings);
         });
     }
-    this.getRentals = function () {
+    self.getRentals = function () {
         $http.get('/properties/rentals').then(function (response) {
-            console.log(response.data);
+            
+            self.rentals.list = response.data;
+            console.log('rentals in service:' , self.rentals);
         });
     }
     
